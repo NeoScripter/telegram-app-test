@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        window.Telegram.WebApp.ready();
+        const user = Telegram.WebApp.initDataUnsafe.user;
+        document.write(`<h1>Привет, ${user.first_name} ${user.last_name}!</h1>`);
+        document.write(`<p>ID пользователя: ${user.id}</p>`);
+        document.write(`<p>Имя пользователя: ${user.username}</p>`);
+        document.write(`<p>Язык: ${user.language_code}</p>`);
+        console.log(user);
+    </script>
     <h1>This is a test website for connecting a Telegram app</h1>
 </body>
 </html>
